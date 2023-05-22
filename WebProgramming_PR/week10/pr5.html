@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서적 주문 양식</title>
+    <script>
+        function subm(){
+            var w = document.getElementById('webnum');
+            var wp = document.getElementById('websum');
+            var j = document.getElementById('javanum');
+            var jp = document.getElementById('javasum');
+            var a = document.getElementById('alnum');
+            var ap = document.getElementById('alsum');
+            var tn = document.getElementById('total');
+            var tp = document.getElementById('totalprice');
+            
+            wp.value = w.value*25000;
+            jp.value = j.value*27000;
+            ap.value = a.value*25000;
+            
+            tn.value = parseInt(w.value)+parseInt(j.value)+parseInt(a.value);
+            tp.value = parseInt(wp.value)+parseInt(jp.value)+parseInt(ap.value);
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h2>서적 주문 양식</h2>
+    <p>주문서</p>
+    <form>
+        <table border="1">
+            <tr>
+                <th>책 제목</th><th>가격</th><th>수량</th><th>합계</th>
+            </tr>
+            <tr>
+                <td>웹프로그래밍</td><td>25,000원</td>
+                <td><input type="text" id="webnum"></td>
+                <td><input type="text" id="websum">원</td>
+            </tr>
+            <tr>
+                <td>자바프로그래밍</td><td>27,000원</td>
+                <td><input type="text" id="javanum"></td>
+                <td><input type="text" id="javasum">원</td>
+            </tr>
+            <tr>
+                <td>알고리즘</td><td>25,000원</td>
+                <td><input type="text" id="alnum"></td>
+                <td><input type="text" id="alsum">원</td>
+            </tr>
+            <tr>
+                <td>합계</td><td></td>
+                <td><input type="text" id="total"></td>
+                <td><input type="text" id="totalprice">원</td>
+            </tr>
+        </table>
+        <br>
+            <input type="button" value="합계계산" onclick="subm()">
+            <input type="reset" value="초기화">
+    </form>
+</body>
+</html>

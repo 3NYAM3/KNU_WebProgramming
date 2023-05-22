@@ -1,0 +1,587 @@
+/*web font*/
+
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@공통@@@@@@@@@@@@@@@@@@@@@@@@@  */
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #FFF2F2;
+}
+#mbtn{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+    background-image: url("resource/play.png");
+    background-size: 15px 15px;
+}
+#homebtn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#homeimg{
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s cubic-bezier(0,0,0.5,1);
+}
+#homeimg:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+.frame{
+    margin: 30px 170px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*맨위로*/
+#gotop{
+    border-radius: 50%;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 30px;
+    height: 30px;
+    background-image: url("resource/gotop.png");
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+#gotop:hover{
+    background-color: gray;
+    opacity: 1.0;
+}
+
+
+/* navigator */
+#site-name>a{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #7286D3;
+    text-decoration: overline;
+}
+.navigator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.navigator li{
+    display: inline;
+    align-self: center;
+    margin: 0;
+    margin-left: 5px;
+}
+.nav-menu{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.nav-menu:hover{
+    color: rgb(213, 230, 236);
+    transition: 0.3s;
+}
+hr{
+    display: flex;
+    margin: 0;
+    border-color: gray;
+    border-style: inset;
+    border-width: 2px;
+}
+
+.search{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    top:40%;
+    right:-330px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0 50px 13px 5px;
+    border-radius: 18px;
+    transition: right 0.5s cubic-bezier(0,0,0.5,1);
+    z-index: 999;
+}
+.popup{
+    right: -20px;
+}
+#search-btn{
+    padding: 30px 5px 30px 5px;
+    margin-top: 12px;
+    margin-right: 5px;  
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-family: 'KIMM_Bold', sans-serif;
+    font-weight: 500;
+}
+.search-div{
+    display: flex;
+    flex-direction: column;
+}
+.searched-word{
+    background-color: rgba(255, 105, 180, 0.5);
+}
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@index.html@@@@@@@@@@@@@@@@@@@@@@@  */
+/*baseintro*/
+.baseintro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.koreanIntro{
+    font-family: 'ONE-Mobile-Title', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+}
+.highlight{
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+.highlight:hover{
+    background-color: #FFB4B4;
+}
+.type1:hover{
+    background-color: #FFDEB4;
+}
+.sample{
+    background-color: #E5E0FF;
+}
+.sample:hover{
+    background-color: transparent;
+    color: #FFF2F2;
+    -webkit-text-stroke: 1px black;
+}
+.englishIntro{
+    font-family: 'TAEBAEKmilkyway', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@info.html@@@@@@@@@@@@@@@@@@@@@@  */
+/*asides*/
+.asides{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    background-color: #E5E0FF;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    top: 20%;
+    left: 3px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+    animation: slide 1.5s forwards;
+}
+@keyframes slide {
+    from{
+        opacity:0;
+        transform: translate(0, -200%);
+    }
+    to{
+        opacity: 1;
+    }
+}
+.aside-list{
+    font-family: 'KIMM_Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+}
+.aside-list li{
+    list-style-type: none;
+}
+.aside-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.aside-list a:hover{
+    color: rgb(213, 230, 236);
+    transition: 0.3s;
+}
+
+
+/*info.html section article*/
+.inner-title{
+    text-align: center;
+}
+.innerFrame h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    
+}
+.arti>h3{
+    font-family: 'KIMM_Bold', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+.arti p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+#art1, #art3, #art5{
+    margin-right: 25%;
+}
+#art2, #art4{
+    margin-left: 25%;
+}
+#art2>h3, #art4>h3{
+    text-align: right;
+}
+
+/*footer*/
+#footerhr{
+    margin-top: 100px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.contLink{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#instagram{
+    width: 30px;
+    height: 30px;
+}
+
+#github{
+    margin-left: 12px;
+    width: 30px;
+    height: 30px;
+}
+
+#email{
+    margin-top: 5px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@interest.html@@@@@@@@@@@@@@@@@@@@@  */
+/*skill*/
+
+.interesting{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+.interesting h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 170px;
+    text-decoration: underline;
+}
+.tech{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+.techImg{
+    width: 600px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0,0,0.5,1);
+}
+.techImg:hover{
+    transform: scale(1.02);
+    transform-origin: center;
+}
+.techInfo{
+    margin: 0 30px;
+}
+.techName{
+    font-family: 'KIMM_Bold', sans-serif;
+    font-size: 40px;
+}
+.sTechName{
+    font-family: 'KIMM_Bold', sans-serif;
+    font-size: 20px;
+}
+.techComment{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+.more{
+    width: content;
+    height: content;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+/* more버튼을 눌렀을 때 나오는 숨겨진 div */
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 998;
+}
+.moreComment{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 500px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.5);
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow-y: scroll;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+.moreComment h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+.moreComment h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+/* Enterprise */
+#naverlogo{
+    background-color: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 60px;
+}
+.department{
+    font-family: 'KIMM_Bold', sans-serif;
+    font-size: 40px;
+}
+.carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.c-line{
+    display: flex;
+    flex-direction: row;
+}
+.carouselItem{
+    width: 400px;
+    height: 350px;
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+    filter: blur(2px);
+}
+.carouselItem:hover{
+    filter: none;
+}
+.carouselItem p{
+   font-family: 'Noto Sans KR', sans-serif;
+}
+.c-title{
+    font-family: 'ONE-Mobile-Title', sans-serif;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ plan.html @@@@@@@@@@@@@@@@@@@@@@ */
+.plan-sect{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+.plan-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 200px;
+}
+.plan-bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 630px;
+    border-radius: 0 18px 0 0;
+}
+.bg-study{
+    background-color: rgba(158, 213, 246, 0.3);
+    border-bottom: 8px outset rgba(158, 213, 246, 0.8);
+    border-left: 8px outset rgba(158, 213, 246, 0.8);
+}
+.bg-employment{
+    background-color: rgba(233, 179, 243, 0.3);
+    border-bottom: 8px outset rgba(233, 179, 243, 0.8);
+    border-left: 8px outset rgba(233, 179, 243, 0.8);
+}
+.plan-title{
+    position: relative;
+    bottom: 100px;
+    right: 40px;
+}
+.plan-title h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+}
+#plan-img{
+    position: absolute;
+    top: 150px;
+    left: 70px;
+}
+.study-content-container{
+    position: absolute;
+    top: 80px;
+    left: 425px;
+}
+.study-content{
+    display: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+.study-content p{
+    font-size: 25px;
+}
+.study-content h3{
+    font-family: 'KIMM_Bold', sans-serif;
+    font-size: 40px;
+}
+.study-content li{
+    list-style-type: none;
+    margin-bottom: 3px;
+}
+.study-content li a{
+    text-decoration: none;
+}
+.study-content li a:visited{
+    color: black;
+}
+
+
+.employment-content-container{
+    position: absolute;
+    top: 80px;
+    left: 425px;
+}
+.employment-content{
+    display: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+.employment-content h3{
+    font-family: 'KIMM_Bold', sans-serif;
+    font-size: 40px;
+}
+.employment-content p{
+    font-size: 25px;
+}
+.employment-content li{
+    list-style-type: none;
+    margin-bottom: 3px;
+}
+.employment-content li a{
+    text-decoration: none;
+}
+.employment-content li a:visited{
+    color: black;
+}
+
+.active{
+    display: block;
+}
+.pb, .nb{
+    position: absolute;
+    top: 3px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.pb{
+    right: 100px;
+}
+.nb{
+    right: 10px;
+}
+#prev-canvas{
+    width: 70;
+    height: 70;
+}
+#next-canvas{
+    width: 70;
+    height: 70;
+}

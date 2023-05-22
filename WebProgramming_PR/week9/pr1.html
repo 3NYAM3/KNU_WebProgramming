@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visiblity 프로퍼티</title>
+    <style>
+        span{
+            color: blue;
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        function setVisibility(){
+            var a = document.getElementsByClassName('sp');
+            for(var i=0;a.length;i++){
+                if(a[i].style.visibility=="visible"){
+                    a[i].style.visibility="hidden";
+                }else{
+                    a[i].style.visibility="visible";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>다음 빈 곳에 숨은 단어?  <input type="button" value="show/hide" onclick="setVisibility()" ></h2>
+    <hr>
+    <ul>
+        <li>I (<span class="sp">love</span>) you.</li>
+        <li>CSS is Cascading(<span class="sp">Style</span>)Sheet.</li>
+        <li>응답하라(<span class="sp">1988</span>).</li>
+    </ul>
+</body>
+</html>

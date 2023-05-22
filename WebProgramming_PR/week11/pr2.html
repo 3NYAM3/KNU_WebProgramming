@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout</title>
+    <script>
+        function getDiv(){
+            var time = document.getElementById('time');
+            setTime(time);
+        }
+        function setTime(obj){
+            var t = new Date();
+            obj.innerHTML = t.toLocaleTimeString();
+            setTimeout("setTime(time)",1000);
+        }
+    </script>
+</head>
+<body onload="getDiv()">
+    <h2>div태그에 시계 만들기</h2>
+    <hr>
+    <div id="time"></div>
+</body>
+</html>

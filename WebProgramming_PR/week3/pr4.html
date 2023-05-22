@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상담카드</title>
+</head>
+<body>
+    <h1 style="text-align: center;">상담카드</h1>
+    <form style="display: table; margin-left: auto; margin-right: auto;" >
+        <table border="1">
+            <tr>
+                <td>좌우명</td><td colspan="3"><input type="text" size="50"></td>
+            </tr>
+            <tr>
+                <td>학번</td><td><input type="text"></td>
+                <td>이름</td><td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>주민<br>번호</td><td><input type="text"></td>
+                <td>메일<br>주소</td><td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>상담<br>희망일</td><td><input type="date"></td>
+                <td>연락처</td><td><select>
+                    <option value="1" selected>010</option>
+                    <option value="2">012</option>
+                    <option value="3">019</option>
+                </select>- <input type="text" size="4">- <input type="text" size="4"></td>
+            </tr>
+            <tr>
+                <td>희망<br>진로</td>
+                <td colspan="3">
+                    <input type="radio" name="hope">대학원
+                    <input type="radio" name="hope">대기업
+                    <input type="radio" name="hope">창업
+                    <input type="radio" name="hope">유학
+                </td>
+            </tr>
+            <tr>
+                <td>학습량<br>(0~24시간)</td>
+                <td colspan="3">
+                    <input type="number" size="4">시간<br>
+                    집중 정도(0~10):0 <input type="range" min="0" max="10" list="concentration">10
+                    <datalist id="concentration">
+                        <option value="1">low</option>
+                        <option value="5">middle</option>
+                        <option value="9">high</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>상담 희망<br>목록</td>
+                <td colspan="3"><textarea cols="50" rows="6" placeholder="유무선네트워킹"></textarea></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

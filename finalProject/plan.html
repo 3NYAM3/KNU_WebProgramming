@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="final.js"></script>
+    <title>PLAN</title>
+</head>
+<body style="overflow-x: hidden;">
+    <a id="homea" href="index.html"><div id="homebtn"><img src="resource/home.png" id="homeimg"></div></a>
+    
+    <div class="search">
+        <button id="search-btn" onclick="popup()"> &lt; </button>
+        <div class="search-div">
+            <form onsubmit="if(this.t1.value!=null && this.t1.value!='')searchWord(this.t1.value);return false;">
+                <p>검색</p>
+                <input type="text" name="t1" size="36px" id="search-bar" placeholder="단어 검색">
+            </form> 
+        </div>
+    </div>
+
+    <div class="frame">
+        <nav class="navigator">
+            <h3 id="site-name"><a href="index.html">DOYEONG</a></h3>
+            <ul>
+                <li><a class="nav-menu" href="info.html">INFO</a></li>
+                <li><a class="nav-menu" href="interest.html">INTEREST</a></li>
+                <li><a class="nav-menu" href="plan.html"  style="text-decoration: underline;">PLAN</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <section class="plan-sect">
+            <article class="plan-container">
+                <button class="st-prev-button pb" style="width: 70px; height: 70px;"></button>
+                <button class="st-next-button nb"  style="width: 70px; height: 70px;"></button>
+                <div class="plan-bg bg-study">
+                    <div class="plan-title">
+                        <h1>Study</h1>
+                    </div>
+                    <img id="plan-img" src="resource/studying.png" width="200px" height="200px">
+                </div>
+                <div class="study-content-container">
+                    <div class="study-content" id="study-con1">
+                        <h3>Internet</h3>
+                        <p>
+                            2023 벡엔드 개발자 로드맵에서 볼 수 있듯이 벡엔드 개발자가 되기 위해 가장 첫번째로 공부해야하는 분야입니다. 
+                            인터넷의 기본지식을 전공수업에서 들은 것을 참고하여 다시 공부할 예정입니다.
+                        </p>
+                        <ul>
+                            <li>인터넷의 작동원리</li>
+                            <li>http란?</li>
+                            <li>브라우저와 그 작동 원리</li>
+                            <li>dns와 그 작동 원리</li>
+                            <li>도메인 이름이란?</li>
+                            <li>호스팅이란?</li>
+                        </ul>
+                    </div>
+                    <div class="study-content" id="study-con2">
+                        <h3>JavaScript</h3>
+                        <p>
+                            백엔드도 프론트엔드의 기본 지식을 가지고 있으면 많은 도움이 됩니다. <br>
+                            또한, 2023 백엔드 개발자 로드맵에서 보면 javaScript언어를 추천하고 있기에 공부할 예정입니다.
+                        </p>
+                    </div>
+                    <div class="study-content" id="study-con3">
+                        <h3>Java</h3>
+                        <p>
+                            스프링 프레임워크를 사용하여 백엔드 개발을 하는것이 목표이기 떄문에 자바는 필수적입니다. <br>
+                            전공 수업시간에 배운 자바 지식을 참고하여 더욱 숙련된 자바 프로그래밍 실력을 갖는 것이 목표입니다. <br>
+                            또한, 국내 대부분의 백엔드 개발자 직종이 자바와 Spring을 사용하기 때문에 공부할 예정입니다.
+                        </p>
+                        <ul>
+                            <li>Java와 JVM</li>
+                            <li>자바 기초</li>
+                            <li>객체지향 프로그래밍</li>
+                            <li>Thread</li>
+                            <li>Annotation</li>
+                            <li>
+                                <details>
+                                    <summary>Java 주요 디자인 패턴</summary>
+                                    <ul>
+                                        <li>참고 사이트 : <a href="https://refactoring.guru/ko">REFACTORING GURU</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="study-content" id="study-con4">
+                        <h3>Spring & SpringBoot</h3>
+                        <p>
+                            국내 Enterprise 환경에서 많이 사용하는 프레임워크입니다. <br>
+                            inflearn 강의를 통해 공부중이고 스프링과 스프링 부트를 이용하여 간단한 프로젝트를 하는것이 목표입니다.
+                        </p>
+                        <ul>
+                            <li>Spring이란</li>
+                            <li>웹 개발과 REST API</li>
+                            <li>SpringBoot</li>
+                            <li>트랜잭션</li>
+                            <li>Test code</li>
+                        </ul>
+                    </div>
+                    <div class="study-content" id="study-con5">
+                        <h3>JPA</h3>
+                        <p>
+                            Java진영의 대표적인 ORM인 JPA를 공부할 것입니다. <br>
+                            사실 JPA에 대해서 제로 베이스이기 떄문에 이전 공부 분야를 어느정도 숙련을 하고 공부할 예정입니다.
+                        </p>
+                        <ul>
+                            <li>ORM</li>
+                            <li>영속성 관리</li>
+                            <li>Entity</li>
+                            <li>Proxy</li>
+                            <li>JPQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="plan-container">
+                <button class="em-prev-button pb" style="width: 70px; height: 70px;"></button>
+                <button class="em-next-button nb"  style="width: 70px; height: 70px;"></button>
+                <div class="plan-bg bg-employment">
+                    <div class="plan-title">
+                        <h1>Employment</h1>
+                    </div>
+                    <img id="plan-img" src="resource/job-search.png" width="200px" height="200px">
+                </div>
+                <div class="employment-content-container">
+                    <div class="employment-content" id="emplolyment-con1">
+                        <h3>창업동아리 웹 개발 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 취업동아리 웹 스터디</h3>
+                        <p>
+                            학교에서 주최하는 동아리 활동을 통해 웹 개발에 대한 경험을 쌓을 것입니다.
+                        </p>
+                        <ul>
+                            <li>창업동아리 활동을 통하여 웹 개발에 대한 계획부터 개발까지의 경험을 쌓을 수 있습니다.</li>
+                            <li>취업동아리에 가입을 하여 체계적인 스터디를 통한 팀 프로젝트 활동 경험을 쌓을 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div class="employment-content" id="employment-con2">
+                        <h3>BootCamp</h3>
+                        <p>
+                            국내 엔터프라이즈들은 프로젝트 경험을 중요하게 여기기 때문에 부트캠프를 통해 스터디, 팀프로젝트 경험을 쌓을 것입니다.
+                        </p>
+                        <ul>
+                            <li><a href="https://www.swmaestro.org/sw/main/main.do">SW마에스트로</a></li>
+                            <li><a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp">SSAFY</a></li>
+                            <li><a href="https://school.programmers.co.kr/learn/KDT">프로그래머스 데브코스</a></li>
+                            <li><a href="https://techblog.woowahan.com/">우아한 테크캠프</a></li>
+                            <li><a href="https://boostcamp.connect.or.kr/">부스트 캠프</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <hr id="footerhr">
+
+        <footer>
+            <h3 id="contact">CONTACT ME</h3>
+            <div class="contLink">
+                <a href="https://www.instagram.com/doooooo0_00/"><img src="resource/insta.png" id="instagram"></a>
+                <a href="https://github.com/3NYAM3"><img src="resource/github.png" id="github"></a>
+            </div>
+            <div id="email">09jjrr21@naver.com</div>
+        </footer>
+    </div>
+    <div id="gotop" onclick="window.scrollTo(0,0)"></div>
+</body>
+</html>

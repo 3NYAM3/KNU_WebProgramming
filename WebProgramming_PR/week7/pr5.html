@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var book = new Array(3);
+        function input(){
+            for(var i=0;i<book.length;i++){
+                var str = prompt("콤마로 분리하면서 제목, 저자, 가격 순으로 입력");
+                book[i]= new Object();
+                [book[i].title, book[i].writer, book[i].price] = str.split(",");
+            }
+        }
+
+        function output(){
+            for(i=0;i<book.length;i++){
+                document.write(`${book[i].title}, ${book[i].writer}, ${book[i].price}<br>`);
+            }
+            document.write("<hr>");
+        }
+
+        function findExpen(){
+            var temp = book[0];
+            for(var i=0;i<book.length;i++){
+                if(temp.price<book[i].price){
+                    temp=book[i];
+                }
+            }
+            document.write(`가장 가격이 비싼 책은 ${temp.title}`);
+        }
+    </script>
+    <title>객체배열만들기</title>
+</head>
+<body>
+    <h2>book 객체 배열 만들기</h2>
+    <hr>
+    <script>
+        input();
+        output();
+        findExpen();
+    </script>
+    
+</body>
+</html>

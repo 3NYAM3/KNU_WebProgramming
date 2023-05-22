@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="final.js"></script>
+    <title>INTEREST</title>
+</head>
+<body>
+
+    <a id="homea" href="index.html"><div id="homebtn"><img src="resource/home.png" id="homeimg"></div></a>
+
+    <div class="overlay" onclick="hideDiv()"></div>
+    <div class="moreComment" id="mc1">
+        <h1>Detail Explanation about Definition</h1>
+        <h3>easy development</h3>
+        <p>
+            기업에서 운영하는 웹 서비스에는 비즈니스 로직이라는 것이 있습니다. 비즈니스 로직이란, 기업이 제공하는 서비스를 코드로 구현한 것으로, 
+            사용자의 요구사항을 해결하기 위한 실질적인 코드들을 의미합니다. 스프링이 등장하기 이전에는 비즈니스 로직을 구현하기 위해 기술 자체에 대한 공부를 추가적으로 해야만 했습니다. 
+            그러나, 스프링은 이전 기술에 비해 사용 방법이 상대적으로 덜 복잡합니다. 따라서, 개발 초기에 기본적인 설정과 적용시킬 기술들만 잘 선택을 해준다면, 
+            기술보다는 애플리케이션의 로직 자체에 더 집중하여 비즈니스 로직을 구현할 수 있습니다.
+        </p>
+        <h3>open source</h3>
+        <p>
+            스프링은 모든 사용자에게 무료로 열려있습니다. 즉 어떤 개인 및 기업도 스프링을 사용하여 웹 애플리케이션을 개발할 수 있으며, 
+            필요하다면 스프링의 코드를 일부 수정하여 사용하여도 무관합니다. 
+            스프링은 오픈소스 프레임 워크이지만, 안정적인 개발과 개선이 보장됩니다.
+        </p>
+        <h3>lightweight</h3>
+        <p>
+            기존의 스프링 대신 사용하던 기술들과 비교하여, 스프링을 사용했을 떄에 개발자가 작성해야 할 코드가 상대적으로 단순합니다. 
+            즉, 스프링을 사용함으로써 기존 기술을 사용할 떄에 불가피하게 작성해야만 했던 불필요하게 복잡한 코드를 제거하여 코드의 복잡성을 낮출 수 있습니다.
+        </p>
+        <h3>framework</h3>
+        <p>
+            애플리케이션 프레임워크는 애플리케이션을 개발하는데에 있어 필요한 모든 업무 분야 및 모든 기술과 관련된 코드들의 뼈대를 제공합니다.
+        </p>
+    </div>
+    <div class="moreComment" id="mc2">
+        <h1>advantage of SpringBoot</h3>
+        <h3>1</h3>
+        <p>
+            기존에 어려운 초기 설정에 쏟아야 했을 시간과 노력을 절약하여 비즈니스 로직을 구현하는데에 집중할 수 있습니다.
+        </p>
+        <h3>2</h3>
+        <p>
+            스프링부트는 자체적인 웹 서버를 내장하고 있어, 빠르고 간편하게 배포를 진행 할 수 있습니다.
+        </p>
+        <h3>3</h3>
+        <p>
+            스프링부트를 사용하면 독립적으로 실행 가능한 Jar파일로 프로젝트를 빌드할 수 있어, 클라우드 서비스 및 도커와 같은 가상화 환경에 빠르게 배포할 수 있습니다.
+        </p>
+    </div>
+    <div class="moreComment" id="mc3">
+        <h1>POJO</h1>
+        <h3>Importance</h3>
+        <p>
+            만약 외부 라이브러리를 import하여 메서드를 사용하고 있는 객체가 있다고 가정해봅시다. 
+            이 객체는 순수 Java외의 기술을 사용하고 있으므로 POJO가 아닙니다. 그런데 이 객체가 사용하고 있는 기술이 중요도가 떨어져 
+            사용이 되지 않거나, 개선된 기술이 등장하여 기존 기술과 관련된 코드를 모두 고쳐야 하는 상황이 발생하면 
+            해당 기술을 사용하고 있는 모든 객체들의 코드를 전부 바꿔 주어야만 합니다.
+        </p>
+        <p>
+            반면, POJO는 순수 Java만을 사용하여 만든 객체이므로 특정 기술이나 환경에 종속되지 않습니다. 
+            따라서, 외부 기술이나 규약의 변화에 얽매이지 않아, 보다 유연하게 변화와 확장에 대처할 수 있습니다. 
+            이러한 POJO를 사용하여 비즈니스 로직을 구현하면, 객체지향 설계를 제한없이 적용할 수 있으며, 코드가 단순해져 테스트와 디버깅 또한 쉬워집니다.
+        </p>
+
+    </div>
+    <div class="moreComment" id="mc4">
+        <h1>feature of POJO</h1>
+        <h3>IoC / DI</h3>
+        <p>
+            개발자가 작성한 객체 나 메서드의 제어를 개발자가 아니라 외부에 위임하는 설계원칙을 IoC(Inversion of Control)라고 합니다.
+            즉, 개발자가 아닌 스프링 컨테이너가 필요에 따라 제어를 하는 것입니다. <br>
+            이러한 제어의 역전과정에서 의존관계를 외부에서 결정해주는 것을 말합니다. 
+            즉 사용할 객체를 스스로 결정하지 않고 스프링 컨테이너가 특정 객체를 결정하여 주입하는 것을 말합니다.
+        </p>
+        <h3>AOP</h3>
+        <p>
+            애플리케이션 개발시 구형해야하는 기능들은 애플리케이션의 핵심기능과 괄련된 관심사항인 핵심 관심 사항과 
+            모든 핵심 관심 사항에 공통적으로 적용되는 관심사항을 의미하는 공통 관심 사항으로 분류할 수 있습니다. <br>
+            이 떄, 핵심 관심사항과 공통 관심 사항이 코드에 함께 모여 있으면 중복이 발생할 수 밖에 없습니다. 
+            이러한 코드의 중복을 피하기 위해 공통 관심 사항과 관련된 기능들을 별도의 객체로 분리하여야 합니다. <br>
+            이처럼 애플리케이션 전반에 걸쳐 적용되는 공통 기능을 비즈니스 로직으로 부터 분리 해내는 것을 AOP라고 합니다.
+        </p>
+        <h3>PSA</h3>
+        <p>
+            웹서버는 DB와 소통하며 웹 클라이언트의 요청을 처리하기 때문에 백엔드는 DB와 떼어 놓을 수 없습니다. 
+            DB의 종류는 다양합니다. 만약에 특정 DB를 사용하여 개발을 완료하였는데, 다른 DB로 바꿔야 할 때 기존의 방법으로는 매우 복잡한 과정을 거쳐야 합니다. 
+            하지만 스프링은 데이터베이스 서비스를 추상화한 인터페이스(JDBC)를 제공해주기 때문에 더욱 쉽게 DB를 바꿀 수 있습니다. <br>
+            JDBC처럼 특정 기술과 관련된 서비스를 추상화하여 일관된 방식으로 사용될 수 있도록 한것을 PSA라고 합니다
+        </p>
+    </div>
+
+    <div class="search">
+        <button id="search-btn" onclick="popup()"> &lt; </button>
+        <div class="search-div">
+            <form onsubmit="if(this.t1.value!=null && this.t1.value!='')searchWord(this.t1.value);return false;">
+                <p>검색</p>
+                <input type="text" name="t1" size="36px" id="search-bar" placeholder="단어 검색">
+            </form> 
+        </div>
+    </div>
+
+    <div class="frame">
+        
+        <nav class="navigator">
+            <h3 id="site-name"><a href="index.html">DOYEONG</a></h3>
+            <ul>
+                <li><a class="nav-menu" href="info.html">INFO</a></li>
+                <li><a class="nav-menu" href="interest.html" style="text-decoration: underline;">INTEREST</a></li>
+                <li><a class="nav-menu" href="plan.html">PLAN</a></li>
+            </ul>
+        </nav>
+    
+        <hr>
+        <section class="interesting">
+            <h1>skill</h1>
+            <article class="tech">
+                <div><img class="techImg" id="ti1" src="resource/spring.png"></div>
+                <div class="techInfo">
+                    <h3 class="techName" id="name1">Spring & Spring Boot</h3>
+                        <h3 class="sTechName">Spring</h3>
+                        <p class="techComment">
+                            엔터프라이즈용 java 애플리케이션 개발을 편하게 할 수 있게 해주는 오픈소스 경량급 애플리케이션 프레임워크.
+                        </p>
+                        <button class="more" onclick="showDiv('mc1')">MORE &gt;</button>
+                        <h3 class="sTechName">Spring Boot</h3>
+                        <p class="techComment">
+                            스프링으로 애플리케이션을 만들 때에 필요한 설정을 간편하게 처리해주는 별도의 프레임워크.
+                        </p>
+                        <button class="more" onclick="showDiv('mc2')">MORE &gt;</button>
+                </div>
+            </article>
+            <article class="tech">
+                <div class="techInfo">
+                    <h3 class="techName" id="name1">feature of Spring</h3>
+                        <h3 class="sTechName">POJO</h3>
+                        <p class="techComment">
+                            스프링의 가장 큰 특징은 POJO프로그래밍을 지향한다는 것입니다. POJO란, Plain Old Java Object, 
+                            즉 순수 Java만을 통해서 생성한 객체를 의미합니다. <br>
+                            순수 Java만을 사용한다는 것은 Java 및 Java의 스펙에 정의된 기술만 사용한다는 의미입니다. 
+                            즉, 어떤 객체가 외부의 라이브러리나 외부의 모듈을 가져와서 사용하고 있다면, 그 객체는 POJO라고 할 수 없습니다. 
+                            POJO는 말 그대로, 다른 기술을 사용하지 않는 순수한 Java만을 사용하여 만든 객체인 것입니다.
+                        </p>
+                        <button class="more" onclick="showDiv('mc3')">MORE &gt;</button>
+                </div>
+                <div><img class="techImg" id="ti1" src="resource/springboot.png"></div>
+            </article>
+            <article class="tech">
+                <div><img class="techImg" id="ti1" src="resource/pojo.png"></div>
+                <div class="techInfo">
+                    <h3 class="techName" id="name1">POJO</h3>
+                        <h3 class="sTechName">IoC / DI</h3>
+                        <p class="techComment">
+                            제어의 역전(Inversion of Control) / 의존관계 주입(Dependency Injection)
+                        </p>
+                        <h3 class="sTechName">AOP</h3>
+                        <p class="techComment">
+                            관심 지향 프로그래밍(Aspect Oriented Programming)
+                        </p>
+                        <h3 class="sTechName">PSA</h3>
+                        <p class="techComment">
+                            일관된 서비스 추상화(Portable Service Abstraction)
+                        </p>
+                        <button class="more" onclick="showDiv('mc4')">MORE &gt;</button>
+                </div>
+            </article>
+        </section>
+        <section class="interesting" onload="draw()">
+            <h1>Enterprise</h1>
+            <article class="carousel" id="carouselId">
+                <img id="naverlogo" src="resource/naver.png" width="300px">
+                <h3 class="department">메인tech</h3>
+                <div class="c-line">
+                    <div class="carouselItem" id="ci1">
+                        <h4 class="c-title">부서 역할</h4>
+                        <p>
+                            메인플랫폼은 네이버의 첫 관문인 메인 서비스를 개발하며 개인화 피드를 제공하기 위해 마이크로서비스아키텍쳐(MSA)로 구성된 피드 플랫폼을 개발합니다. <br>
+                            네이버의 첫 관문인 만큼 40여개의 경량화된 컴포넌트들이 유기적으로 결합되어 매일 수십억개의 요청을 빠르게 처리합니다. <br>
+                            메인플랫폼 개발에서는 다년간 축척된 마이크로서비스 아키텍쳐에 대한 노하우와 기술로 거대한 시스템을 가볍게 접근 하고 
+                            필요한 부분만 쉽게 찾아서 수정해서 배포 할 수 있으며 지속적인 통합과 분리를 통한 완벽한 MSA로의 진화를 계속하고 있습니다. <br>
+                            이를 바탕으로 알림, vlive, news, blog, 셀릭티브등 많은 서비스들의 기반시스템 역할을 하고 있습니다.
+                        </p>
+                    </div>
+                    <div class="carouselItem" id="ci2">
+                        <h4 class="c-title">담당 업무</h4>
+                        <p>
+                            네이버 메인(모바일, PC) 서비스 개발 <br>
+                            개인화 피드 플랫폼의 개발<br>
+                            네이버 푸시 및 알림 플랫폼 개발<br>
+                            네이버 알림 서비스 개발 
+                        </p>
+                    </div>
+                </div>
+                <div class="c-line">
+                    <div class="carouselItem" id="ci3">
+                        <h4 class="c-title">업무수행 자격요건</h4>
+                        <p>
+                            Spring Framework의 구조와 Life cycle의 이해<br>
+                            Rabbit-MQ, Kafka, MySQL, Redis 중 적어도 하나의 사용 경험과 깊은 이해<br>
+                            Backend system의 일반적인 아키텍쳐 이해 및 API 설계<br>
+                            객체지향 개발, 리팩토링, 자동화 테스트에 대한 기본 지식
+                        </p>
+                    </div>
+                    <div class="carouselItem" id="ci4">
+                        <h4 class="c-title">추가 보유 스킬셋</h4>
+                        <p>
+                            MSA 에 대한 깊은 이해와 경험<br>
+                            분산 처리 시스템에 대한 성능 최적화 역량 및 경험<br>
+                            다양한 Storage 에 대한 경험 및 최적화 역량<br>
+                            통계시스템 개발 경험
+                        </p>
+                    </div>
+                </div>
+                <h3 class="department">회원&인증플랫폼</h3>
+                <div class="c-line">
+                    <div class="carouselItem" id="ci1">
+                        <h4 class="c-title">부서 역할</h4>
+                        <p>
+                            네이버 로그인 서비스 및 인증서, 네이버 플러스 멤버십 서비스를 담당하고 있으며 
+                            인증관련 사용자 경험 개선 및 사업적인 가치 발굴을 목표로 하고 있습니다. <br>
+                            사용자가 네이버를 사용하기 위한 첫 관문인만큼 견고하고 안전한 경험을 선사하기 위해서 노력하고 있습니다. <br>
+                            또한 이런 경험을 외부 서비스에도 제공하여 안전한 인터넷 환경 구축에 일조하고 있습니다. <br>
+                            네이버 회원 플랫폼 체계를 기반으로 하여 사용자 신원 증명 기반 플랫폼을 개발합니다.
+                        </p>
+                    </div>
+                    <div class="carouselItem" id="ci2">
+                        <h4 class="c-title">담당 업무</h4>
+                        <p>
+                            네이버의 회원 시스템 및 인증 관련 플랫폼 개발<br>
+                            네이버 인증서/전자 문서 등 비대칭키 기반 서명 알고리즘 활용한 서비스 개발<br>
+                            인증 시스템에 대한 비정상적인 접근 차단을 위한 Anomaly Detection
+                        </p>
+                    </div>
+                </div>
+                <div class="c-line">
+                    <div class="carouselItem" id="ci3">
+                        <h4 class="c-title">업무 수행 자격 요건</h4>
+                        <p>
+                            Java & Spring Framework 기반 웹 서버 개발 경험이 있는 분<br>
+                            웹 서비스 인프라에 대한 이해가 있는 분<br>
+                            확장성과 유연성을 보유한 API 설계/구현 경험이 있는 분<br>
+                            점진적인 Devops 도입에 거부감이 없으신 분
+                        </p>
+                    </div>
+                    <div class="carouselItem" id="ci4">
+                        <h4 class="c-title">추가 보유 스킬셋</h4>
+                        <p>
+                            RDMBS의 복제 방식 및 HA 구성에 관련 전문 지식이 있으신 분 <br>
+                            nosql storage의 고가용성 시스템 구성에 다양한 경험이 있으신 분 <br>
+                            Hadoop등을 이용한 대용량 데이터 처리하여 다양한 통계 데이터 처리 경험<br>
+                            Secure Coding 준수에 능하신 분<br>
+                            PKCS 에 대한 이해가 있으신 분
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <hr id="footerhr">
+
+        <footer>
+            <h3 id="contact">CONTACT ME</h3>
+            <div class="contLink">
+                <a href="https://www.instagram.com/doooooo0_00/"><img src="resource/insta.png" id="instagram"></a>
+                <a href="https://github.com/3NYAM3"><img src="resource/github.png" id="github"></a>
+            </div>
+            <div id="email">09jjrr21@naver.com</div>
+        </footer>
+    </div>
+    <div id="gotop" onclick="window.scrollTo(0,0)"></div>
+</body>
+</html>

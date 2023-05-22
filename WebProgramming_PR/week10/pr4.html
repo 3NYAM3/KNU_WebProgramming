@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <style>
+        td{
+           padding-left: 20px;
+           padding-right: 20px;
+        }
+    </style>
+    <script>
+        function calc(obj){
+            var inp = document.getElementById('inputNum');
+            
+            if(inp.value==0){
+                inp.value = obj.value;
+            }else{
+                inp.value = inp.value+obj.value;
+            }
+        }
+
+        function back(){
+            var inpp = document.getElementById('inputNum');
+            
+            inpv = inpp.value.substring(0,length-1);
+            inpp.value=inpv;
+            if(inpv==null){
+                inpp.value='0';
+            }
+            
+        }
+
+        function ce(){
+            var inp = document.getElementById('inputNum');
+            inp.value = 0;
+        }
+    </script>
+</head>
+<body>
+    <h2>계산기 만들기</h2>
+    <hr>
+    <form>
+        <input type="text" id="inputNum" style="width: 300px;" value="0"><br>
+        <table>
+            <tr>
+            <td><input type="button" value="BACK" style="width: 70px;" id="back" onclick="back()"></td>
+            <td><input type="button" value="CE" style="width: 70px;" id="ce" onclick="ce()"></td>
+            <td><input type="button" value="C" style="width: 70px;" id="c" onclick="ce()"></td>
+            <td><input type="button" value="=" style="width: 70px;" id="eq" onclick="calc(this)"></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="7" style="width: 70px;" id="seven" onclick="calc(this)"></td>
+            <td><input type="button" value="8" style="width: 70px;" id="eight" onclick="calc(this)"></td>
+            <td><input type="button" value="9" style="width: 70px;" id="nine" onclick="calc(this)"></td>
+            <td><input type="button" value="/" style="width: 70px;" id="divi" onclick="calc(this)"></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="4" style="width: 70px;" id="four" onclick="calc(this)"></td>
+            <td><input type="button" value="5" style="width: 70px;" id="five" onclick="calc(this)"></td>
+            <td><input type="button" value="6" style="width: 70px;" id="six" onclick="calc(this)"></td>
+            <td><input type="button" value="*" style="width: 70px;" id="mult" onclick="calc(this)"></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="1" style="width: 70px;" id="one" onclick="calc(this)"></td>
+            <td><input type="button" value="2" style="width: 70px;" id="two" onclick="calc(this)"></td>
+            <td><input type="button" value="3" style="width: 70px;" id="three" onclick="calc(this)"></td>
+            <td><input type="button" value="-" style="width: 70px;" id="minus" onclick="calc(this)"></td>
+            </tr>
+            <tr>
+            <td><input type="button" value="0" style="width: 70px;" id="zero" onclick="calc(this)"></td>
+            <td><input type="button" value="+" style="width: 70px;" id="add" onclick="calc(this)"></td>
+            <td><input type="button" value="NONE" style="width: 70px;" onclick="calc()"></td>
+            <td><input type="button" value="NONE" style="width: 70px;" onclick="calc()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

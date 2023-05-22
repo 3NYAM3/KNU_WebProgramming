@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function makeTable(){
+            var row = prompt("행!");
+            var column = prompt("열!");
+            document.write("<table border=\"1\">");
+            for(var i=0;i<row;i++){
+                document.write("<tr>");
+                for(var j=0;j<column;j++){
+                    document.write("<td></td>");
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>");
+        }
+    </script>
+    <style>
+        td{
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+    <title>표만들기</title>
+</head>
+<body>
+    <script>
+        makeTable();
+    </script>
+</body>
+</html>

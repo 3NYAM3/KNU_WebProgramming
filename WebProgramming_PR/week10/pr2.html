@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오 버튼과 이미지 출력</title>
+    <script>
+        function changeImg(obj){
+            var a = document.getElementById('fruitImg');
+            a.src = obj.value;
+        }
+    </script>
+</head>
+<body>
+    <h2>라디오 버튼을 클릭하면 이미지를 출력합니다.</h2>
+    <hr>
+    <form>
+        <input type="radio" name="fruit" value="iu1.jpg" id="banana" checked onclick="changeImg(this)">바나나
+        <input type="radio" name="fruit" value="iu2.jpg" id="mango" onclick="changeImg(this)">망고
+        <input type="radio" name="fruit" value="iu3.png" id="apple" onclick="changeImg(this)">사과
+        <br>
+        <img id="fruitImg" src="iu1.jpg" width="200px">
+    </form>
+</body>
+</html>

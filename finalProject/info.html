@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="final.js"></script>
+    <title>INFO</title>
+</head>
+<body>
+    <a id="homea" href="index.html"><div id="homebtn"><img src="resource/home.png" id="homeimg"></div></a>
+        <aside class="asides">
+            <div>
+                <ul class="aside-list">
+                    <li><a href="#art1">주제선정동기</a></li>
+                    <li><a href="#art2">본인성장과정</a></li>
+                    <li><a href="#art3">최근사회이슈</a></li>
+                    <li><a href="#art4">프로젝트</a></li>
+                    <li><a href="#art5">본인역량</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="search">
+            <button id="search-btn" onclick="popup()"> &lt; </button>
+            <div class="search-div">
+                <form onsubmit="if(this.t1.value!=null && this.t1.value!='')searchWord(this.t1.value);return false;">
+                    <p>검색</p>
+                    <input type="text" name="t1" size="36px" id="search-bar" placeholder="단어 검색">
+                </form> 
+            </div>
+        </div>
+        <div class="frame">
+            <nav class="navigator">
+                <h3 id="site-name"><a href="index.html">DOYEONG</a></h3>
+                <ul>
+                    <li><a class="nav-menu" href="info.html" style="text-decoration: underline;">INFO</a></li>
+                    <li><a class="nav-menu" href="interest.html">INTEREST</a></li>
+                    <li><a class="nav-menu" href="plan.html">PLAN</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <section class="innerFrame">
+                <div class="inner-title"><h1>The <span class="highlight type1">Journey</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To Find Me <br> In The <spnn class="sample">Future</spnn></h1></div>
+                <article id="art1" class="arti">
+                    <h3>주제 선정 동기와 이루고 싶은 목표</h3>
+                    <p>
+                        저는 처음 이 학과를 선택할 때에는 별 생각 없이 그냥 컴퓨터하는것이 좋았고, '취업률이 좋다.', '미래에 성장가능성이 높은 직종이다.' 라는 말만 듣고 
+                        과를 선택했습니다. 처음엔 마냥 재밌게 배울 수 있다고 생각을 했지만, 막상 대학을 다니며 여러 전공과목들을 들으면서 조금식 흥미가 생기긴 했지만 
+                        조금 어려운것이 생기거나 힘들 때마다 이 길이 내가 가야하는 길이 맞나라는 생각이 종종 들었습니다. 하지만 지금은 목표가 생기고 제가 가고싶은 길이 어느정도 보이기 시작했고, 
+                        점점 흥미가 붙게 되었으니 이젠 그 목표를 이루기 위해 계획하며 더욱 목표에 관하여 더 집중하여 공부하고 노력해야겠다는 생각이 들었습니다. <br>
+                        제가 주제를 &lt;The journey to find me in the future&gt; 로 선정한 이유는 미래의 목표를 이룬 저를 찾아가는 여정을 만들고 싶기 때문입니다. <br><br>
+                        저의 목표는 백엔드 개발자 또는 풀스택 개발자가 되는것이 목표입니다. 웹페이지를 디자인하여 만들고 서버와 통신하며 정보를 주고 받을 수 있는 것이 저에게 큰 흥미로 다가왔고 또한, 
+                        그러한 시스템을 보면서 나도 해보고 싶다라는 생각이 들었기 때문입니다. 
+                    </p>
+                </article>
+                <article id="art2" class="arti">
+                    <h3>성장 과정</h3>
+                    <p>
+                        저는 대학에 오기 전까지는 컴퓨터를 다루는 것을 마냥 좋아하기만 하고, 관련 지식도 없었습니다. 
+                        고등학교 친구 중에 독학으로 코딩을 하는 친구가 있었는데 그 친구가 자신만의 웹페이지를 만드는 것을 보고 나도 한번 만들어 보고 싶다라는 생각을 했습니다. 
+                        그런 생각을 하고 있다가 진로를 결정해야하는 때가 오자 흥미가 조금 있었고 미래 가능성이 좋다는 이유도 고려해 컴퓨터 관련 학과를 가자라고 생각을 했습니다. 
+                        하지만 막상 대학교를 다니면서 공부중에 막히는 일이 많았습니다. 그래서 1학년 때는 지금 이 전공에 대한 고민도 많이 하고 걱정도 많이 했습니다. <br>
+                        그렇게 1학년을 마치고 군대를 다녀와서 2학년으로 복학을 했을 때 창업동아리 활동으로 웹 플랫폼 개발을 하고 동아리 내 웹 스터디를 하면서 웹 개발자에 대한 꿈이 생겼습니다. 
+                        그러던 중 자바프로그래밍2의 기말 프로젝트를 하면서 백엔드기능을 조금 체험해봤는데 어려웠지만 같이 프로젝트 하는 팀원의 도움을 받아 더욱 알고 싶다는 마음이 생겼고 그 계기로 백엔드 개발자가를 목표로 두는데 영향을 주었습니다.
+                        지금은 백엔드 개발자 로드맵을 바탕으로 공부할 계획을 세우고 있으며, 스프링 프레임워크를 다루기 위해 인터넷 강의를 들으며 공부하고 있습니다. 
+                    </p>
+                </article>
+                <article id="art3" class="arti">
+                    <h3>최근 사회 이슈</h3>
+                    <p>
+                        소프트웨어정책 연구소가 올해 가장 주목받을 이슈로 초거대 인공지능의 고도화를 통한 산업 혁신 가속을 꼽았습니다. 
+                        소프트웨어정책 연구소는 &lt;2023 SW산업 10대 이슈 전망&gt; 보고서를 통해 “국내 SW산업은 초거대AI의 위상이 고공 행진하는 가운데 
+                        신기술, 제품·서비스의 출현이 두드러질 전망”이라며 “글로벌 기업들의 무한 경쟁도 가속화될 것”이라고 예측했습니다. 
+                        초거대AI는 2020년 미국 연구기관인 오픈AI가 GPT-3를 출시한 이래로 구글, 메타, 마이크로소프트(MS)에 이어 
+                        국내 네이버, LG, SK텔레콤, 카카오 등에서도 관련 기술을 선보이고 있습니다. <br><br>
+                        chatGPT, google bard등 여러 초거대 인공지능(AGI)이 나오면서 개발자의 입지를 위협하고 있다고 생각합니다. 
+                        또한 AGI는 잘못된 정보를 마치 정답인것 마냥 제시되는 경우가 많고, AGI로 만든 콘텐츠로 인한 인터넷 정보 오염, AGI의 상업적 이용에 따른 저작권 문제가 발생할 수 있습니다.
+                        이러한 문제들 뿐만 아니리 앞으로 계속해서 발생할 문제들을 해결해야합니다. 
+                        그렇기 때문에 우리는 이에 손놓고 있지 않고 AGI를 잘 활용할 수 있게 능력을 기르고, 일어날 수 밖에 없는 문제들에 대한 대처방안을 미리 마련해 대응할 수 있어야한다고 생각합니다.
+
+                    </p>
+                </article>
+                <article id="art4" class="arti">
+                    <h3>프로젝트 중 난항과 그 해결 방안</h3>
+                    <p>
+                        저는 보통 모르는 것이 있고 그것이 흥미가 있는 주제이면 혼자서라도 관련자료를 찾아가며 공부하는 편입니다. <br>
+                        2학년 2학기 때 했던 자바프로그래밍2의 기말고사 대체 프로젝트 도중 RestAPI를 이용하여 서버와 통신하는 기능이 있었는데
+                        RestAPI라는것을 그 프로젝트 당시에 처음 듣게 되었고 아무것도 모르는 상태로 RestAPI를 사용해야 했습니다. 
+                        그 당시 같이 프로젝트를 진행하던 팀원에게 RestAPI에 대한 설명을 들었고, 저는 흥미가 생겨 혼자서 서적을 찾아보고, 인터넷에서 관련자료들을 찾아가며 공부를 했습니다. 
+                        처음 접해보는 지식이라 공부하면 할 수록 모르는 부분이 생기는 때도 있었지만, 그 당시에는 그 자료들을 찾아보고 공부하는 것이 흥미롭고 재미있었습니다. <br>
+                        결국 RestAPI에 대한 지식이 어느정도 쌓이면서 프로젝트의 전체적인 흐름에 대한 이해가 되었고, http통신에 대한 호기심이 생겼고 
+                        이 호기심이 저를 백엔드 개발자를 목표로 두는데 영향을 주었습니다.
+                    </p>
+                </article>
+                <article id="art5" class="arti">
+                    <h3>역량</h3>
+                    <p>
+                        저는 백엔드 또는 풀스택 개발자라는 목표를 가지고 있기 때문에 목표를 이루기 위해 여러가지 노력을 하고 있습니다. <br>
+                        인터넷 네트워킹에 대한 지식을 대학교 전공수업을 통해 어느정도 알고 있으며, 운영체제에 대한 기본 지식을 보유하고 있습니다. <br>
+                        스프링 프레임워크의 사용을 위한 Java 언어의 대한 숙련도를 어느정도 보유하고 있습니다. <br> 
+                        Spring과 SpringBoot 그리고 추가적으로 http 웹 기본 지식에 대한 강의도 현재 inflearn강의를 통해 배우는 중입니다. <br>
+                        또한 관계대이터 베이스 시스템에 대한 지식을 어느정도 보유하고 있습니다. 
+
+                    </p>
+                </article>
+            </section>
+
+            <hr id="footerhr">
+
+            <footer>
+                <h3 id="contact">CONTACT ME</h3>
+                <div class="contLink">
+                    <a href="https://www.instagram.com/doooooo0_00/"><img src="resource/insta.png" id="instagram"></a>
+                    <a href="https://github.com/3NYAM3"><img src="resource/github.png" id="github"></a>
+                </div>
+                <div id="email">09jjrr21@naver.com</div>
+            </footer>
+        </div>
+    <div id="gotop" onclick="window.scrollTo(0,0)"></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="final.js"></script>
+    <title>PORTFOLIO</title>
+    <audio id="myAudio" src="resource/universal.mp3" hidden="true"></audio>
+</head>
+<body>
+    <div id="mbtn" onclick="playbtn(this)"></div>
+    <a id="homea" href="index.html"><div id="homebtn"><img src="resource/home.png" id="homeimg"></div></a>
+    <div class="frame">
+        
+        <nav class="navigator">
+            <h3 id="site-name"><a href="index.html">DOYEONG</a></h3>
+            <ul>
+                <li><a class="nav-menu" href="info.html">INFO</a></li>
+                <li><a class="nav-menu" href="interest.html">INTEREST</a></li>
+                <li><a class="nav-menu" href="plan.html">PLAN</a></li>
+            </ul>
+        </nav>
+        
+        <hr>
+
+        <div class="search">
+            <button id="search-btn" onclick="popup()"> &lt; </button>
+            <div class="search-div">
+                <form onsubmit="if(this.t1.value!=null && this.t1.value!='')searchWord(this.t1.value);return false;">
+                    <p>검색</p>
+                    <input type="text" name="t1" size="36px" id="search-bar" placeholder="단어 검색">
+                </form> 
+            </div>
+        </div>
+
+        <div class="baseintro">
+            <h1 class="koreanIntro">
+                <p>안녕하세요! <span class="highlight">공주대학교</span> <span class="highlight type1">소프트웨어학과</span><br>
+                <span class="sample">이도영</span>입니다.</p> 
+            </h1>
+            <p class="englishIntro">
+                Kongju National University Software engineering<br>
+                Web Programming final Exam PORTFOLIO webPage.
+            </p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <hr id="footerhr">
+
+        <footer>
+            <h3 id="contact">CONTACT ME</h3>
+            <div class="contLink">
+                <a href="https://www.instagram.com/doooooo0_00/"><img src="resource/insta.png" id="instagram"></a>
+                <a href="https://github.com/3NYAM3"><img src="resource/github.png" id="github"></a>
+            </div>
+            <div id="email">09jjrr21@naver.com</div>
+        </footer>
+        
+        
+    </div>
+    <div id="gotop" onclick="window.scrollTo(0,0)"></div>
+</body>
+</html>

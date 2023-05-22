@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterver</title>
+    <script>
+        var timeID;
+        function getDiv(){
+            var time = document.getElementById('time');
+            timeID=setTime(time);
+            setTimeout("setTime(time)",1000);
+        }
+        function setTime(obj){
+            var t = new Date();
+            obj.innerHTML = t.toLocaleTimeString();
+        }
+        function sng(){
+            if(timeID==null){
+                timeID=setInterval("setTime(time)", 1000);
+                document.getElementById('time').style.color="black";
+            }else{
+                clearInterval(timeID);
+                timeID=null;
+                document.getElementById('time').style.color="lightgray";
+            }
+        }
+    </script>
+</head>
+<body onload="getDiv()">
+    <h2>div태그에 시계 만들기</h2>
+    시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다. <br>
+    <hr>
+    <div id="time" onclick="sng()"></div>
+</body>
+</html>

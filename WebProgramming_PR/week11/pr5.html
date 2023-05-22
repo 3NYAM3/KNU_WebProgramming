@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산수풀기</title>
+    <style>
+        td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+    <script>
+        function strat() {
+            var qArr = document.getElementsByClassName('q');
+            var oper = ["+", "-", "*", "/"];
+            var count = 10;
+            document.getElementById('timer').innerHTML=10;
+            for (var i = 0; i < qArr.length; i++) {
+                var num1 = Math.floor(Math.random() * 10) + 1;
+                var num2 = Math.floor(Math.random() * 10) + 1;
+                var op = Math.floor(Math.random() * 4);
+                qArr[i].innerHTML = num1 + oper[op] + num2;
+            }
+            var timerID = setInterval(function () {
+                document.getElementById('remain').innerHTML = --count;
+                if (count == 0) {
+                    clearInterval(timerID);
+                    check();
+                }
+            }, 1000);
+
+        }
+        function check() {
+            var qArr = document.getElementsByClassName('q');
+            var aArr = document.getElementsByClassName('a');
+            var cor = 0;
+            for (var i = 0; i < a.length; i++) {
+                if (eval(qArr[i].textContent) == aArr[i].value) {
+                    cor++;
+                } else {
+                    qArr[i].textContent.style.textDecoration = "line-through";
+                }
+            }
+            document.getElementById('result').innerHTML=cor;
+        }
+        function restart() {
+            var qArr = document.getElementsByClassName('q');
+            var aArr = document.getElementsByClassName('a');
+            for (var i = 0; i < qArr.length; i++) {
+                qArr[i].textContent.style.textDecoration = "none";
+                aArr[i].value = "";
+            }
+            document.getElementById('result').innerHTML=0;
+            start();
+        }
+    </script>
+</head>
+
+<body onload="start()">
+    <h2>산수 문제를 풀어 봅시다.</h2>
+    문제는 자동으로 생성되며, 10초가 지나면 자동 채점됩니다. <br>
+    <div id="timer">남은 시간 <span id="remain">0</span></div>
+    <hr>
+    <form action="">
+        <table>
+            <tr>
+                <td class="q"></td>
+                <td><input type="text" class="a"></td>
+            </tr>
+            <tr>
+                <td class="q"></td>
+                <td><input type="text" class="a"></td>
+            </tr>
+            <tr>
+                <td class="q"></td>
+                <td><input type="text" class="a"></td>
+            </tr>
+            <tr>
+                <td class="q"></td>
+                <td><input type="text" class="a"></td>
+            </tr>
+            <tr>
+                <td id="scoring"><input type="button" value="다시"></td>
+                <td id="result">0</td>
+            </tr>
+        </table><br>
+
+    </form>
+</body>
+
+</html>
